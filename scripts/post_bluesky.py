@@ -28,7 +28,7 @@ def should_post(timestamp_str):
 
 def post_to_bluesky(text):
     handle = os.getenv("BLUESKY_HANDLE")
-    password = os.getenv("BLUESKY_PASSWORD")
+    password = os.getenv("BLUESKY_APP_PASSWORD")
 
     client = Client()
     client.login(handle, password)
