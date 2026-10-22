@@ -1,8 +1,8 @@
 name: Bluesky Scheduler
 
 on:
-  # schedule:
-  #  - cron: "0 * * * *"
+  schedule:
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -22,6 +22,6 @@ jobs:
 
       - name: Run Bluesky scheduler
         env:
-          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
-          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          BLUESKY_HANDLE: william_argo.bsky.social
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
         run: python scripts/post_bluesky.py
